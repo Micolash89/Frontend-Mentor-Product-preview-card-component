@@ -1,0 +1,144 @@
+@import url(variables.css);
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap");
+
+/* font-family: 'Montserrat', sans-serif; */
+/* 500 700 */
+/* font-family: 'Fraunces', serif; */
+/* 700 */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  padding: 30px 15px;
+  background-color: var(--Cream);
+  font-family: "Montserrat", sans-serif;
+}
+
+.main {
+  background-color: var(--White);
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  /* overflow: hidden; */
+  align-items: center;
+}
+
+.main__imagen {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.main__imagen--mobile,
+.main__imagen--desktop {
+  width: 100%;
+  border-radius: var(--radius) var(--radius) 0 0;
+}
+
+.main__descripcion {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.main__descripcion--categoria {
+  color: var(--Dark-grayish-blue);
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 5px;
+}
+
+.main__descripcion--nombre {
+  font-size: 34px;
+  color: var(--Very-dark-blue);
+}
+
+.main__descripcion--nombre,
+.precio__descuento {
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+}
+
+.main__descripcion--parrafo {
+  font-size: 14px;
+  /* font-weight: 500; */
+  color: var(--Dark-grayish-blue);
+  line-height: 22px;
+}
+.precio {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.precio__descuento {
+  font-size: 30px;
+  color: var(--Dark-cyan);
+}
+.precio__anterior {
+  color: var(--Dark-grayish-blue);
+  text-decoration: line-through;
+  font-size: 13px;
+}
+
+.botton {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: var(--White);
+  background-color: var(--Dark-cyan);
+  padding: 12px;
+  border-radius: var(--radius-btn);
+  border: none;
+}
+
+.botton:hover {
+  cursor: pointer;
+  background-color: var(--Dark-green);
+}
+
+@media (min-width: 1440px) {
+  body {
+    padding: 7% 25% !important;
+    /* margin: 10%; */
+    width: 100%;
+    height: 100%;
+  }
+  .main {
+    flex-direction: row;
+    width: 80%;
+  }
+
+  .main__imagen {
+    /* width: 50%; */
+  }
+
+  .main__imagen--mobile {
+    display: none;
+  }
+
+  .main__imagen--desktop {
+    display: flex;
+
+    border-radius: var(--radius) 0 0 var(--radius);
+  }
+
+  .main__descripcion {
+    display: flex;
+    width: 80%;
+    padding: 30px;
+    gap: 30px;
+  }
+}
