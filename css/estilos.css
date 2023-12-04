@@ -139,6 +139,12 @@ body {
     display: flex;
     width: 80%;
     padding: 30px;
+    gap: 17px;
+  }
+}
+
+@media (min-width: 1527px) {
+  .main__descripcion {
     gap: 30px;
   }
 }
